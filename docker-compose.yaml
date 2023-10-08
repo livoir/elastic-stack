@@ -14,8 +14,8 @@ services:
     deploy:
       resources:
         limits:
-          memory: 700MB
-          cpus: 1
+          memory: 1GB
+          cpus: '1'
     environment:
       - xpack.security.enabled=false
       - node.name=${ELASTICSEARCH_NODE_NAME}
@@ -42,6 +42,6 @@ services:
       resources:
         limits:
           memory: 1GB
-          cpus: 1
+          cpus: '1'
     env_file:
       - .env
