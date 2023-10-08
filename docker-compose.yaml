@@ -25,6 +25,10 @@ services:
       - bootstrap.memory_lock=true
       - ELASTIC_PASSWORD=${ELASTICSEARCH_PASSWORD}
       - discovery.seed_hosts=${ELASTICSEARCH_DISCOVERY_SEED_HOSTS}
+      - network.publish_host=${ELASTICSEARCH_PUBLISH_HOST}
+      - http.publish_host=${ELASTICSEARCH_PUBLISH_HOST}
+      - transport.publish_host=${ELASTICSEARCH_PUBLISH_HOST}
+
     env_file:
       - .env
 
